@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="30"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="0/20"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAddition"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:text="12+12"
+        android:gravity="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScore"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toEndOf="@+id/textViewTimer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="190dp"
+            android:layout_height="175dp"
+            android:layout_marginEnd="10dp"
+            android:text="30"
+            android:tag="0"
+            android:textSize="40sp"
+            android:background="@drawable/round_button"
+            android:onClick="buttonClicked"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="190dp"
+            android:layout_height="175dp"
+            android:text="12"
+            android:background="@drawable/round_button"
+            android:tag="1"
+            android:onClick="buttonClicked"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="190dp"
+            android:layout_height="175dp"
+            android:layout_row="1"
+            android:background="@drawable/round_button"
+            android:layout_column="0"
+            android:layout_marginTop="10dp"
+            android:text="10"
+            android:tag="2"
+            android:onClick="buttonClicked"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="190dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="175dp"
+            android:background="@drawable/round_button"
+            android:text="19"
+            android:tag="3"
+            android:onClick="buttonClicked"
+            android:textSize="40sp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="185dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="52dp"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:text="CORRECT !"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
